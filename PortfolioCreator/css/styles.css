@@ -1,0 +1,176 @@
+/* Base Styles */
+body {
+    background: linear-gradient(135deg, #0d0d0d 30%, #1a1a1a 100%); /* Smooth gradient */
+    color: #716109; /* Gold text */
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px;
+    padding: 0;
+    border-radius: 25px;
+    background: rgba(0, 0, 0, 0.85); /* Slight transparency */
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.7);
+    overflow: hidden;
+    transform: scale(0.98);
+    transition: transform 0.4s, box-shadow 0.4s;
+}
+
+.container:hover {
+    transform: scale(1);
+    box-shadow: 0 20px 60px rgba(255, 215, 0, 0.3); /* Highlight effect */
+}
+
+.form-container {
+    padding: 40px;
+    position: relative;
+}
+
+h1 {
+    font-size: 2.8em;
+    text-align: center;
+    margin-bottom: 10px;
+    color: #716109;
+    letter-spacing: 3px;
+    position: relative;
+    display: inline-block;
+    transition: color 0.4s;
+}
+
+h1 .highlight {
+    color: #e6c200; /* Slightly different shade of gold */
+}
+
+.description {
+    text-align: center;
+    color: #ccc;
+    font-size: 1.1em;
+    margin-bottom: 35px;
+}
+
+label {
+    font-weight: bold;
+    color: #716109;
+    display: block;
+    font-size: 1.15em;
+    margin-bottom: 10px;
+}
+
+.form-group {
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.form-control {
+    background: rgba(255, 255, 255, 0.1); /* Transparent input */
+    border: 1px solid #716109; /* Gold border */
+    padding: 14px;
+    font-size: 1.1em;
+    border-radius: 8px;
+    transition: background 0.4s, border-color 0.4s, box-shadow 0.4s, transform 0.3s;
+    color: #716109; /* Gold text */
+}
+
+.form-control:focus {
+    background: #1a1a1a; /* Darker background on focus */
+    border-color: #e6c200;
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+    outline: none;
+    transform: translateY(-2px);
+}
+
+textarea.form-control {
+    resize: none;
+    height: 150px;
+}
+
+.btn-submit {
+    font-size: 1.2em;
+    padding: 15px 0;
+    background: linear-gradient(45deg, #716109, #e6c200);
+    border: none;
+    color: #0d0d0d; /* Black text */
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background 0.5s, transform 0.4s, box-shadow 0.4s;
+    letter-spacing: 1px;
+    width: 100%;
+    max-width: 250px;
+    margin: 20px auto;
+    display: block;
+    text-align: center;
+}
+
+.btn-submit:hover {
+    background: linear-gradient(45deg, #e6c200, #716109);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(230, 194, 0, 0.4);
+}
+
+input[type="file"] {
+    color: #716109;
+    border: none;
+    background: none;
+    padding: 12px 0;
+    height:fit-content
+}
+
+input[type="file"]::file-selector-button {
+    background: linear-gradient(45deg, #716109, #e6c200);
+    color: #0d0d0d;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.3s, box-shadow 0.3s, transform 0.3s;
+}
+
+input[type="file"]::file-selector-button:hover {
+    background: linear-gradient(45deg, #e6c200, #716109);
+    box-shadow: 0 5px 15px rgba(230, 194, 0, 0.4);
+    transform: translateY(-2px);
+}
+
+input[type="file"]:focus {
+    outline: none;
+}
+
+/* Advanced Animations */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.form-container {
+    animation: fadeInUp 1s ease-out;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.2em;
+    }
+
+    .btn-submit {
+        font-size: 1.1em;
+        padding: 12px 0;
+    }
+
+    .form-control {
+        font-size: 0.95em;
+    }
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Creator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h1 style="align-content: center;">Create Your <span class="highlight">Portfolio</span></h1>
+            <form id="portfolioForm" action="../api/savePortfolio.php" method="POST" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="name"><i class="fas fa-user"></i> Full Name</label>
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email"><i class="fas fa-envelope"></i> Email</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="bio"><i class="fas fa-info-circle"></i> Short Bio</label>
+                    <textarea class="form-control" id="bio" name="bio" rows="3" placeholder="Tell us about yourself" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="skills"><i class="fas fa-code"></i> Skills</label>
+                    <input type="text" class="form-control" id="skills" name="skills" placeholder="E.g., Java, HTML, CSS" required>
+                </div>
+                <div class="form-group">
+                    <label for="projects"><i class="fas fa-project-diagram"></i> Projects</label>
+                    <textarea class="form-control" id="projects" name="projects" rows="3" placeholder="Briefly describe your projects" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="profilePic"><i class="fas fa-camera"></i> Profile Picture</label>
+                    <input type="file" class="form-control" id="profilePic" name="profilePic" accept="image/*" required>
+                </div>
+                <button type="submit" class="btn btn-submit"><i class="fas fa-paper-plane"></i> Create Portfolio</button>
+            </form>
+        </div>
+    </div>
+    <script src="../js/script.js"></script>
+</body>
+</html>
